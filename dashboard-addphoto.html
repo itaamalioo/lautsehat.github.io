@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LautSehat.id</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template style -->
+  <link href="sass/main.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+<!-- Header -->
+<header>
+  <div class="grid">
+    <img src="img/alt-logo1.png" alt="Logo" class="logo" />
+    <nav class="navbar">
+      <label for="menu-trigger">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </label>
+      <input type="checkbox" id="menu-trigger" />
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"> Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Category <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="category.html">Category 1</a></li>
+            <li><a href="category.html">Category 2</a></li>
+            <li><a href="category.html">Category 3</a></li>
+          </ul>
+        </li>
+        <li><a href="category.html">Cotegory</a> </li>
+        <li class="menu-right">
+          <ul class="nav navbar-nav navbar-right list-inline">
+            <li>
+              <div id="wrap">
+                <form action="" autocomplete="on">
+                  <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+                </form>
+              </div>
+            </li>
+            <li><a href="dashboard.html" class="post"><i class="fa fa-edit"></i></a></li>
+            <li><a href="profile.html" class="log-in"><i class="fa fa-user"></i></a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+</header>
+
+
+<div class="row bg-white">
+
+  <div class="navbar navbar-default navbar-sidebar col-md-2" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-default sidebar" role="navigation">
+      <div class="sidebar-nav">
+        <ul class="nav side-nav" id="side-menu">
+          <li><a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+          <li class="expand">
+            <a href="javascript:;" data-toggle="collapse" data-target="#artikel"><i class="fa fa-fw fa-th-list"></i> Post <i class="fa fa-fw fa-caret-down pull-right"></i></a>
+            <ul id="artikel" class="collapse">
+              <li><a href=".html">All Post</a></li>
+              <li><a href=".html">Add New</a></li>
+            </ul>
+            <!-- /.nav-second-level-->
+          </li>
+          <li class="expand"><a href="#" data-toggle="collapse" data-target="#moderasi" class="collapse" aria-expanded="false"><i class="fa fa-pencil-square-o  fa-fw"></i> Moderasi<i class="fa fa-fw fa-caret-down pull-right"></i></a>
+            <ul id="moderasi" class="collapse">
+              <li><a href=".html">All Post</a></li>
+              <li><a href=".html">Add New</a></li>
+            </ul>
+            <!-- /.nav-second-level-->
+          </li>
+          <li><a href="profile.html"><i class="fa fa-user fa-fw"></i> Profil</a></li>
+        </ul>
+      </div>
+      <!-- /.sidebar-collapse-->
+    </div>
+    <!-- /.navbar-static-side-->
+  </div>
+
+  <!-- page content -->
+  <div class="col-md-10 col-md-push-2 col-sm-10 col-sm-push-2">
+    <div class="page-inner dashboard-content page-content">
+      <div>
+        <ol class="breadcrumb breadcrumb-right-arrow">
+          <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+          <li class="breadcrumb-item"><a href="#">Artikel</a></li>
+          <li class="breadcrumb-item active">Tambah Foto</li>
+        </ol>
+      </div>
+
+      <section>
+        <div class="list">
+          <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <h2 class="heading-section">TAMBAH Foto</h2>
+              <div class="newPost">
+                <h5 class="">Judul</h5>
+                <input type="text" placeholder="Masukkan Judul Artikel">
+                <h5 class="">Paragraf Pembuka</h5>
+                <!--  <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> <script type="text/javascript">
+                  //<![CDATA[
+                        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+                  //]]>
+                  </script> -->
+                <div class="toolbar">
+                    <button type="button" data-func="bold"><i class="fa fa-bold"></i></button>
+                    <button type="button" data-func="italic"><i class="fa fa-italic"></i></button>
+                    <button type="button" data-func="underline"><i class="fa fa-underline"></i></button>
+                    <button type="button" data-func="justifyleft"><i class="fa fa-align-left"></i></button>
+                    <button type="button" data-func="justifycenter"><i class="fa fa-align-center"></i></button>
+                    <button type="button" data-func="justifyright"><i class="fa fa-align-right"></i></button>
+                    <button type="button" data-func="insertunorderedlist"><i class="fa fa-list-ul"></i></button>
+                    <button type="button" data-func="insertorderedlist"><i class="fa fa-list-ol"></i></button>
+                    <div class="customSelect">
+                      <select data-func="fontname">
+                        <optgroup label="Serif Fonts">
+                          <option value="Bree Serif">Bree Serif</option>
+                          <option value="Georgia">Georgia</option>
+                           <option value="Palatino Linotype">Palatino Linotype</option>
+                          <option value="Times New Roman">Times New Roman</option>
+                        </optgroup>
+                        <optgroup label="Sans Serif Fonts">
+                          <option value="Arial">Arial</option>
+                          <option value="Arial Black">Arial Black</option>
+                          <option value="Asap" selected>Asap</option>
+                          <option value="Comic Sans MS">Comic Sans MS</option>
+                          <option value="Impact">Impact</option>
+                          <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                          <option value="Tahoma">Tahoma</option>
+                          <option value="Trebuchet MS">Trebuchet MS</option>
+                          <option value="Verdana">Verdana</option>
+                        </optgroup>
+                        <optgroup label="Monospace Fonts">
+                          <option value="Courier New">Courier New</option>
+                          <option value="Lucida Console">Lucida Console</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                </div>
+                <div class="editor" contenteditable></div>
+
+                <div class="add-photo">
+                  <h4 class="title">Gambar 1</h4>
+                  <div class="content">
+
+                    <div class="row m-b-1">
+                      <div class="col-sm-6 col-sm-offset-3">
+                        <div class="form-group inputDnD">
+                          <label class="sr-only" for="inputFile">File Upload</label>
+                          <input type="file" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Klik untuk upload foto">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <h5>Sumber Foto</h5>
+                      <ul class="list-inline">
+                        <li><input type="text" placeholder="sumber image" style="width: 100%;"></li><li><span>via</span></li><li><input type="text" placeholder="http://" style="width: 100%;"></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <h5 class="">Deskripsi</h5>
+                      <div class="toolbar">
+                          <button type="button" data-func="bold"><i class="fa fa-bold"></i></button>
+                          <button type="button" data-func="italic"><i class="fa fa-italic"></i></button>
+                          <button type="button" data-func="underline"><i class="fa fa-underline"></i></button>
+                          <button type="button" data-func="justifyleft"><i class="fa fa-align-left"></i></button>
+                          <button type="button" data-func="justifycenter"><i class="fa fa-align-center"></i></button>
+                          <button type="button" data-func="justifyright"><i class="fa fa-align-right"></i></button>
+                          <button type="button" data-func="insertunorderedlist"><i class="fa fa-list-ul"></i></button>
+                          <button type="button" data-func="insertorderedlist"><i class="fa fa-list-ol"></i></button>
+                          <div class="customSelect">
+                            <select data-func="fontname">
+                              <optgroup label="Serif Fonts">
+                                <option value="Bree Serif">Bree Serif</option>
+                                <option value="Georgia">Georgia</option>
+                                 <option value="Palatino Linotype">Palatino Linotype</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                              </optgroup>
+                              <optgroup label="Sans Serif Fonts">
+                                <option value="Arial">Arial</option>
+                                <option value="Arial Black">Arial Black</option>
+                                <option value="Asap" selected>Asap</option>
+                                <option value="Comic Sans MS">Comic Sans MS</option>
+                                <option value="Impact">Impact</option>
+                                <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                                <option value="Tahoma">Tahoma</option>
+                                <option value="Trebuchet MS">Trebuchet MS</option>
+                                <option value="Verdana">Verdana</option>
+                              </optgroup>
+                              <optgroup label="Monospace Fonts">
+                                <option value="Courier New">Courier New</option>
+                                <option value="Lucida Console">Lucida Console</option>
+                              </optgroup>
+                            </select>
+                          </div>
+                      </div>
+                      <div class="editor" contenteditable></div>
+                    </div>
+                </div>
+              </div>
+              </div>
+
+            </div>
+
+
+            <div class="col-md-4 col-sm-12">
+              <div class="panel">
+                <div class="heading">Terbitkan</div>
+                <div class="content">
+                  <div class="clearfix"><a href="#" class="btn btn-grey pull-left">simpan konsep</a>
+                  <a href="#" class="btn btn-grey pull-right">pratinjau</a></div>
+                  <small>status :   <b>Draft</b></small>
+                  <br /><br />
+                  <button>Submit to review</button>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="heading">Copyright content</div>
+                <div class="content">
+                  <label class="checkbox-inline">
+                    <input type="checkbox">copyright
+                  </label>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="heading">Gambar andalan</div>
+                <div class="content">
+                  <a href="" class="btn">Buat gambar utama</a><br />
+                  <small>Maksimal 800px x 400px</small>
+                  <div>Source</div>
+                  <input type="text" placeholder="source" style="width: 100%;">
+                  <input type="text" placeholder="source" style="width: 100%;">
+                </div>
+              </div>
+              <div class="panel">
+                <div class="heading">Tag</div>
+                <div class="content">
+                  <textarea name="" id="" cols="30" rows="4" placeholder="add topic"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="darken-1" if="footer">  
+    <div class="footer-copyright text-center">
+      <div class="container">
+        <ul class="list-inline list-unstyled">
+          <li><a href="#">Tentang LautSehat.id</a></li>
+          <li><a href="#">Kontak Kami</a></li>
+          <li><a href="#">privacy Policy</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+        <div class="logo-footer"><img src="img/logo.png" alt=""></div>
+        <p class="col-md-10 col-md-offset-1"> 2016 &copy; All Right Reserved - <a href="#">lautsehat.id </a></p>
+      </div>
+    </div>
+  </footer>
+
+<script type="text/javascript">
+    $('.newPost button[data-func]').click(function(){
+    document.execCommand( $(this).data('func'), false   );
+  });
+
+  $('.newPost select[data-func]').change(function(){
+    var $value = $(this).find(':selected').val();
+    document.execCommand( $(this).data('func'), false, $value);
+  });
+
+  if(typeof(Storage) !== "undefined") {
+
+  $('.editor').keypress(function(){
+    $(this).find('.saved').detach();
+  });
+    $('.editor').html(localStorage.getItem("wysiwyg")) ;
+    
+    $('button[data-func="save"]').click(function(){
+      $content = $('.editor').html();
+      localStorage.setItem("wysiwyg", $content);
+      $('.editor').append('<span class="saved"><i class="fa fa-check"></i></span>').fadeIn(function(){
+        $(this).find('.saved').fadeOut(500);
+      });
+    });
+    
+    $('button[data-func="clear"]').click(function(){
+      $('.editor').html('');
+      localStorage.removeItem("wysiwyg");
+    });
+    
+    
+  } 
+</script>
+
+<script type="text/javascript">
+  function readUrl(input) {
+  
+  if (input.files && input.files[0]) {
+    let reader = new FileReader();
+    reader.onload = (e) => {
+      let imgData = e.target.result;
+      let imgName = input.files[0].name;
+      input.setAttribute("data-title", imgName);
+      console.log(e.target.result);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+
+}
+</script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.6.6/summernote.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <!-- Material Design Bootstrap -->
+
+
+</body>
+
+</html>
