@@ -2,34 +2,32 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LautSehat.id</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Lautsehat.id</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Template style -->
   <link href="sass/main.css" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css?family=Helvetica|Helvetica+Neue|Source+Sans+Pro:300,400,500,600,700" rel="stylesheet">
 </head>
 
 <body>
 <!-- Header -->
 <header>
   <div class="grid">
-    <img src="img/alt-logo1.png" alt="Logo" class="logo" />
+    <a href="index.html"><img src="img/alt-logo1.png" alt="Logo" class="logo" /></a>
     <nav class="navbar">
       <label for="menu-trigger">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </label>
       <input type="checkbox" id="menu-trigger" />
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"> Home</a></li>
+        <li class="active"><a href="index.html"> Home</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Category <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -44,12 +42,19 @@
             <li>
               <div id="wrap">
                 <form action="" autocomplete="on">
-                  <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+                  <input id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit"><span class="visible-xs">Search</span>
                 </form>
               </div>
             </li>
-            <li><a href="dashboard.html" class="post"><i class="fa fa-edit"></i></a></li>
-            <li><a href="profile.html" class="log-in"><i class="fa fa-user"></i></a></li>
+            <li><a href="dashboard.html" class="post"><i class="fa fa-edit"></i><span class="visible-xs">Buat Artikel</span></a></li>
+            <li class="dropdown log-in ">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><div class="user-thumb user-thumb-small"><img src="img/user2.jpeg" alt=""></div><span class="visible-xs">Soni</span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="profile.html"><i class="fa fa-user"></i>&nbsp;Profile</a></li>
+                <li><a href="dashboard-editprofile.html"><i class="fa fa-edit"></i>&nbsp;Update Profile</a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -90,7 +95,7 @@
   </div>
 
   <!-- page content -->
-  <div class="col-md-10 col-md-push-2 col-sm-10 col-sm-push-2">
+  <div class="col-md-10 col-md-push-2 col-sm-10 col-sm-push-2 side-left">
     <div class="page-inner dashboard-content page-content">
       <div>
         <ol class="breadcrumb breadcrumb-right-arrow">
@@ -268,7 +273,7 @@
           <li><a href="#">privacy Policy</a></li>
           <li><a href="#">Disclaimer</a></li>
         </ul>
-        <div class="logo-footer"><img src="img/logo.png" alt=""></div>
+        <div class="logo-footer"><img src="img/alt-logo1.png" alt=""></div>
         <p class="col-md-10 col-md-offset-1"> 2016 &copy; All Right Reserved - <a href="#">lautsehat.id </a></p>
       </div>
     </div>
