@@ -160,11 +160,15 @@
                   <h4 class="title">Gambar 1</h4>
                   <div class="content">
 
-                    <div class="row m-b-1">
-                      <div class="col-sm-6 col-sm-offset-3">
-                        <div class="form-group inputDnD">
-                          <label class="sr-only" for="inputFile">File Upload</label>
-                          <input type="file" class="form-control-file text-primary font-weight-bold" id="inputFile" accept="image/*" onchange="readUrl(this)" data-title="Klik untuk upload foto">
+                    <div class="row m-b-1 add-photo">
+                      <div class="col-sm-6 col-sm-offset-3 content" style="border: none; padding:0">
+                        <div class="containers">
+                          <div class="imageWrapper">
+                            <img class="image" src="http://dnepr.info/wp-content/uploads/2016/10/1384775795_1026843613.jpg" alt="gambar-cover" name="gambar-cover">
+                          </div>
+                        </div>
+                        <div class="file-upload">            
+                          <input type="file" class="file-input">Update Cover
                         </div>
                       </div>
                     </div>
@@ -312,23 +316,6 @@
     
   } 
 </script>
-
-<script type="text/javascript">
-  function readUrl(input) {
-  
-  if (input.files && input.files[0]) {
-    let reader = new FileReader();
-    reader.onload = (e) => {
-      let imgData = e.target.result;
-      let imgName = input.files[0].name;
-      input.setAttribute("data-title", imgName);
-      console.log(e.target.result);
-    }
-    reader.readAsDataURL(input.files[0]);
-  }
-
-}
-</script>
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
 
@@ -336,7 +323,21 @@
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-  <!-- Material Design Bootstrap -->
+<script type="text/javascript">
+  $('.file-input').change(function(){
+      var curElement = $(this).parent().parent().find('.image');
+      console.log(curElement);
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+          // get loaded data and render thumbnail.
+          curElement.attr('src', e.target.result);
+      };
+
+      // read the image file as a data URL.
+      reader.readAsDataURL(this.files[0]);
+  });
+</script>
 
 
 </body>
