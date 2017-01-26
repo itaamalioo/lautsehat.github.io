@@ -952,7 +952,7 @@ header {
     -webkit-justify-content: center;
     flex-direction: column;
     -webkit-flex-direction: column;
-    margin: 20px; }
+    margin: 15px; }
     .page-inner .comment-box p {
       margin: 0 30px 15px;
       font-weight: 300;
@@ -960,6 +960,16 @@ header {
       word-wrap: break-word;
       background: #EEE;
       padding: 5px 10px; }
+  .page-inner .comments .comment-item {
+    padding: 20px 0; }
+    .page-inner .comments .comment-item .cm-content {
+      background-color: #ffffff;
+      padding: 15px;
+      margin-left: 12px;
+      color: #444242;
+      font-size: 1.4rem;
+      line-height: 20px;
+      letter-spacing: .2px; }
   .page-inner .comment-header {
     margin: 5px 0px;
     font-size: 27px;
