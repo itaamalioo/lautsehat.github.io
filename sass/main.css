@@ -615,23 +615,30 @@ header {
       margin: 10px 0;
       min-width: 282px;
       max-height: 360px;
+      height: 360px;
       width: 100%;
       background: #000;
       text-align: center;
       cursor: pointer;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
+      @media screen and (max-width: 512px) {
+        .page-inner .grid figure {
+          height: 290px; } }
       .page-inner .grid figure img {
         position: relative;
         display: block;
         min-height: 100%;
         max-width: none;
-        width: -webkit-calc(100% + 30px);
+        width: -webkit-calc(100% + 15px);
         width: calc(100% + 30px);
         opacity: 0.7;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;
-        -webkit-transform: translate3d(-25px, 0, 0);
-        transform: translate3d(-25px, 0, 0); }
+        -webkit-transform: translate3d(-15px, 0, 0);
+        transform: translate3d(-15px, 0, 0); }
       .page-inner .grid figure figcaption {
         text-align: left;
         padding: 2em;
@@ -952,7 +959,7 @@ header {
     -webkit-justify-content: center;
     flex-direction: column;
     -webkit-flex-direction: column;
-    margin: 15px; }
+    margin: 20px; }
     .page-inner .comment-box p {
       margin: 0 30px 15px;
       font-weight: 300;
@@ -960,16 +967,6 @@ header {
       word-wrap: break-word;
       background: #EEE;
       padding: 5px 10px; }
-  .page-inner .comments .comment-item {
-    padding: 20px 0; }
-    .page-inner .comments .comment-item .cm-content {
-      background-color: #ffffff;
-      padding: 15px;
-      margin-left: 12px;
-      color: #444242;
-      font-size: 1.4rem;
-      line-height: 20px;
-      letter-spacing: .2px; }
   .page-inner .comment-header {
     margin: 5px 0px;
     font-size: 27px;
@@ -1014,7 +1011,7 @@ header {
 
 #hero-wrapper .carousel-wrapper,
 #hero-carousel {
-  height: 300px;
+  height: 330px;
   width: 100%;
   position: relative;
   overflow: hidden; }
@@ -1037,10 +1034,10 @@ header {
   color: #FFF;
   top: 0;
   bottom: 0;
-  margin-top: 230px;
+  margin-top: 260px;
   background: rgba(0, 0, 0, 0.63);
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
   padding-top: 17px; }
   @media screen and (max-width: 769px) {
     #hero-carousel .caption {
@@ -1050,8 +1047,15 @@ header {
 .carousel-indicators {
   display: none; }
 
-.carousel-inner .item {
-  padding: 0; }
+.carousel-inner {
+  height: 100%; }
+  .carousel-inner .item {
+    padding: 0;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%; }
 
 .list.tag h2 {
   color: #009bbd;
@@ -1402,64 +1406,36 @@ table > tbody > tr > td {
   .add-photo .content {
     padding: 20px;
     border: 1px solid #ddd; }
-    .add-photo .content .containers {
-      height: 164px;
-      position: relative;
-      width: 100%;
-      margin: auto; }
-      .add-photo .content .containers .imageWrapper {
-        background-color: #fff;
-        margin-top: 20px;
-        margin-bottom: 8px;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        min-height: 164px;
-        outline: none;
-        overflow: hidden;
-        border: 2px dashed #dcdcdc; }
-        .add-photo .content .containers .imageWrapper img {
-          height: auto;
-          width: initial;
-          max-width: initial;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%; }
-    .add-photo .content .file-upload {
-      position: absolute;
-      overflow: hidden;
-      margin: 0;
-      top: 0;
-      padding-top: 64px;
-      margin-left: auto;
-      width: 100%;
-      height: 160px;
-      text-align: center;
-      font-size: 16px;
-      display: block;
-      -ms-transition: all 0.2s ease;
-      -webkit-transition: all 0.2s ease;
-      transition: all 0.2s ease;
-      margin-left: 50%;
-      margin-right: 50%;
-      transform: translate(-50%, 0); }
-      .add-photo .content .file-upload:hover {
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
-        -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
-        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75); }
-      .add-photo .content .file-upload input.file-input {
-        position: absolute;
-        top: 0;
-        cursor: pointer;
-        opacity: 0;
-        width: 100%;
-        height: 100%; }
-    .add-photo .content p {
-      margin: 7px auto; }
     .add-photo .content img {
       max-width: 100%; }
+    .add-photo .content .inputDnD .form-control-file {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 124px;
+      outline: none;
+      visibility: hidden;
+      cursor: pointer;
+      background-color: #c61c23;
+      box-shadow: 0 0 5px solid currentColor; }
+      .add-photo .content .inputDnD .form-control-file:before {
+        content: attr(data-title);
+        position: absolute;
+        top: 0.5em;
+        left: 0;
+        width: 100%;
+        min-height: 124px;
+        line-height: 4.5em;
+        padding-top: 1.5em;
+        opacity: 1;
+        visibility: visible;
+        text-align: center;
+        border: 2px dashed #dcdcdc;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        overflow: hidden; }
+      .add-photo .content .inputDnD .form-control-file:hover:before {
+        border-style: solid;
+        box-shadow: inset 0px 0px 0px 1px #dcdcdc; }
 
 @media screen and (max-width: 992px) {
   .side-left {
